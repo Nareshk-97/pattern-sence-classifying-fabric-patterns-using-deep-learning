@@ -1,0 +1,220 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Prediction Result</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #ede7e7;
+      color: #4e4c4c;
+      text-align: center;
+      padding-top: 80px;
+    }
+    nav {
+      background-color: #092d43;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: rgb(222, 218, 218);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-sizing: border-box;
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: 300;
+    }
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+    .nav-links a {
+      color: rgb(225, 219, 219);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: #9dc4d8;
+    }
+    main {
+      margin-top: 100px;
+      padding: 20px;
+    }
+    img {
+  display: block;
+  margin: 0 auto 30px auto;
+  width: auto;               
+  max-width: 300px;           
+  max-height: 300px;          
+  object-fit: contain;        
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(28, 28, 28, 0.15);
+}
+
+    .prediction-text {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    .btn-custom {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 28px;
+      font-size: 1em;
+      color: rgb(236, 224, 224);
+      background-color: #072638;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .btn-custom:hover {
+      background-color: #083d60;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">PATTERN SENSE</div>
+    <div class="nav-links">
+      <a href="{{ url_for('home') }}">HOME</a>
+      <a href="{{ url_for('about') }}">ABOUT</a>
+      <a href="{{ url_for('contact') }}">CONTACT</a>
+      <a href="{{ url_for('classify') }}">GET STARTED</a>
+    </div>
+  </nav>
+
+  <main>
+  <h1>Image Classification</h1>
+  <img src="{{ url_for('static', filename='uploads/' + image_file) }}" alt="Uploaded Pattern Image">
+  <div class="prediction-text">
+    The Pattern is: <em>{{ label }}</em>
+  </div>
+  <div>
+    <a href="{{ url_for('classify') }}" class="btn-custom">Try with another image!</a>
+  </div>
+</main>
+
+
+</body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Prediction Result</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #ede7e7;
+      color: #4e4c4c;
+      text-align: center;
+      padding-top: 80px;
+    }
+    nav {
+      background-color: #092d43;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: rgb(222, 218, 218);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-sizing: border-box;
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: 300;
+    }
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+    .nav-links a {
+      color: rgb(225, 219, 219);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: #9dc4d8;
+    }
+    main {
+      margin-top: 100px;
+      padding: 20px;
+    }
+    img {
+  display: block;
+  margin: 0 auto 30px auto;
+  width: auto;               
+  max-width: 300px;           
+  max-height: 300px;          
+  object-fit: contain;        
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(28, 28, 28, 0.15);
+}
+
+    .prediction-text {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    .btn-custom {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 28px;
+      font-size: 1em;
+      color: rgb(236, 224, 224);
+      background-color: #072638;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .btn-custom:hover {
+      background-color: #083d60;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">PATTERN SENSE</div>
+    <div class="nav-links">
+      <a href="{{ url_for('home') }}">HOME</a>
+      <a href="{{ url_for('about') }}">ABOUT</a>
+      <a href="{{ url_for('contact') }}">CONTACT</a>
+      <a href="{{ url_for('classify') }}">GET STARTED</a>
+    </div>
+  </nav>
+
+  <main>
+  <h1>Image Classification</h1>
+  <img src="{{ url_for('static', filename='uploads/' + image_file) }}" alt="Uploaded Pattern Image">
+  <div class="prediction-text">
+    The Pattern is: <em>{{ label }}</em>
+  </div>
+  <div>
+    <a href="{{ url_for('classify') }}" class="btn-custom">Try with another image!</a>
+  </div>
+</main>
+
+
+</body>
+>>>>>>> a0b994c17c4e999943fa9e0a7d68bc34e2f4ac98
+</html>
